@@ -22,11 +22,16 @@ body {
   width: 100%;
   height: 100%;
   background-color: #cacaca;
-  animation-name: load;
-  animation-duration: 1000ms;
-  animation-fill-mode: forwards;
-  animation-delay: 2000ms;
+  -webkit-animation-name: load;
+          animation-name: load;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
 }
+
 #loading p {
   width: 250px;
   font-weight: 900;
@@ -34,9 +39,24 @@ body {
   margin: 200px auto 10px auto;
   font-size: 3rem;
 }
+
 #loading i {
   color: #5c5c5c;
   font-size: 5rem;
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    height: 0px;
+    z-index: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes load {
@@ -52,24 +72,29 @@ body {
     opacity: 0;
   }
 }
+
 /***************************HEADER***************************/
 #head-menu {
   color: red;
   width: 100%;
 }
+
 #head-menu #logo-div {
   margin: auto;
   width: 150px;
 }
+
 #head-menu #logo-div #logo {
   margin-top: 20px;
   margin-bottom: 30px;
   height: 30px;
   width: 150px;
 }
+
 #head-menu p {
   text-align: center;
-  box-shadow: inset -1px 2px 5px 0px #4a4a4a;
+  -webkit-box-shadow: inset -1px 2px 5px 0px #4a4a4a;
+          box-shadow: inset -1px 2px 5px 0px #4a4a4a;
   font-size: 16px;
   font-weight: bold;
   padding-top: 10px;
@@ -78,6 +103,7 @@ body {
   background-color: #f2f2f2;
   color: #5c5c5c;
 }
+
 #head-menu p i {
   color: #393939;
   margin-right: 20px;
@@ -89,16 +115,19 @@ body {
   width: 100%;
   background-color: #f2f2f2;
 }
+
 #main-top-menu h1 {
   text-align: center;
   padding: 30px 10% 15px 10%;
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 #main-top-menu p {
   text-align: center;
   padding: 0px 5% 20px 5%;
 }
+
 #main-top-menu button {
   cursor: pointer;
   display: block;
@@ -109,6 +138,7 @@ body {
   color: white;
   border-radius: 30px;
   border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#b367cc));
   background: linear-gradient(#ff79da, #b367cc);
 }
 
@@ -124,21 +154,26 @@ h2 {
 #work {
   list-style: none;
 }
+
 #work li {
   background-color: #f2f2f2;
   cursor: pointer;
-  box-shadow: -1px 1px 20px 0px #9d9d9d;
+  -webkit-box-shadow: -1px 1px 20px 0px #9d9d9d;
+          box-shadow: -1px 1px 20px 0px #9d9d9d;
   border-radius: 10px;
   width: 280px;
   border: none;
   margin: 20px auto;
 }
+
 #work li:hover {
-  background-color: rgba(179, 103, 204, 0.1803921569);
+  background-color: #b367cc2e;
 }
+
 #work li:hover i {
   color: #c04fe5;
 }
+
 #work button {
   cursor: pointer;
   padding: 20px 0px;
@@ -149,6 +184,7 @@ h2 {
   background: none;
   border-radius: 10px;
 }
+
 #work span {
   margin-left: -10px;
   border-radius: 50%;
@@ -156,6 +192,7 @@ h2 {
   background-color: #b367cc;
   color: white;
 }
+
 #work i {
   margin-left: 20px;
   margin-right: 10px;
@@ -167,23 +204,28 @@ h2 {
   background-color: #f2f2f2;
   padding-bottom: 20px;
 }
+
 #main-container h3 {
   padding-top: 50px;
   margin-bottom: 20px;
   font-size: 1.3rem;
   margin-left: 16px;
 }
+
 #main-container > div {
-  box-shadow: -1px 1px 20px 0px #9d9d9d;
+  -webkit-box-shadow: -1px 1px 20px 0px #9d9d9d;
+          box-shadow: -1px 1px 20px 0px #9d9d9d;
   margin: 20px auto;
   border-radius: 10px;
   width: 290px;
   background-color: white;
 }
+
 #main-container a {
   text-decoration: none;
   color: black;
 }
+
 #main-container #img1,
 #main-container #img2,
 #main-container #img3,
@@ -195,23 +237,10 @@ h2 {
   height: 150px;
   background-size: cover;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-#main-container #img1 {
-  background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-position: 90% 90%;
-}
-#main-container #img2 {
-  background-image: url(../img/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-position: 90% 60%;
-}
-#main-container #img3 {
-  background-image: url(../img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  background-position: 90% 90%;
-}
-#main-container #img4 {
-  background-image: url(../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-position: 50% 95%;
-}
+
 #main-container span {
   border-radius: 5px;
   font-size: 0.8rem;
@@ -221,22 +250,26 @@ h2 {
   margin-left: -80px;
   position: absolute;
   color: green;
-  background-color: rgb(173, 255, 210);
+  background-color: #adffd2;
 }
+
 #main-container .text {
   text-decoration: none;
   margin-left: 10px;
   margin-top: 20px;
   padding-bottom: 20px;
 }
+
 #main-container .text-title {
   font-weight: 900;
   font-size: 1rem;
 }
+
 #main-container div p {
   font-weight: 100;
   margin-top: 5px;
 }
+
 #main-container .heart {
   height: 20px;
   width: 20px;
@@ -245,23 +278,31 @@ h2 {
   position: absolute;
   margin-left: 215px;
 }
+
 #main-container .heart:hover .full-heart {
   width: 20px;
-  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
+
 #main-container .heart:hover .border-heart {
   opacity: 0;
 }
+
 #main-container .full-heart {
   width: 20px;
   position: absolute;
   color: #b367cc;
-  transform: scale(0);
-  transition-duration: 1000ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
 }
+
 #main-container .border-heart {
   opacity: 1;
-  transition-duration: 1200ms;
+  -webkit-transition-duration: 1200ms;
+          transition-duration: 1200ms;
   width: 20px;
   color: black;
 }
@@ -272,6 +313,7 @@ footer {
   background-color: #4a4a4a;
   height: 150px;
 }
+
 footer ul {
   margin-top: 10px;
   font-size: 0.8rem;
@@ -279,13 +321,16 @@ footer ul {
   color: white;
   list-style: none;
 }
+
 footer ul .footer-li {
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
+
 footer ul li {
   margin-top: 5px;
 }
+
 footer ul li i {
   margin-right: 10px;
 }
@@ -298,16 +343,19 @@ footer ul li i {
   z-index: 2;
   height: 60px;
 }
+
 #page-1 a {
   color: #393939;
   width: 100%;
   text-decoration: none;
 }
+
 #page-1 i {
   margin-left: 20px;
   margin-top: 20px;
   width: 20px;
 }
+
 #page-1 div {
   margin: -25px auto 0px auto;
   background-image: url(../img/ohmyfood.png);
@@ -333,6 +381,7 @@ footer ul li i {
   background-color: #f2f2f2;
   border-radius: 30px 30px 0px 0px;
 }
+
 #main-page1 h1 {
   color: #101010;
   width: 260px;
@@ -340,9 +389,11 @@ footer ul li i {
   margin: auto;
   padding: 20px 0px;
 }
+
 #main-page1 h1 i {
   margin-left: 20px;
 }
+
 #main-page1 > p {
   margin-top: 20px;
   padding-bottom: 5px;
@@ -352,10 +403,14 @@ footer ul li i {
   margin-left: 15px;
   border-bottom: 2px solid #14ebeb;
 }
+
 #main-page1 ul {
   list-style: none;
 }
+
 #main-page1 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 290px;
   height: 65px;
@@ -363,11 +418,27 @@ footer ul li i {
   cursor: pointer;
   margin: 15px auto;
   background-color: white;
-  box-shadow: 3px 4px 20px 5px #d5d5d5;
-  animation-duration: 1s;
-  animation-name: slide;
-  animation-delay: 2100ms;
+  -webkit-box-shadow: 3px 4px 20px 5px #d5d5d5;
+          box-shadow: 3px 4px 20px 5px #d5d5d5;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
 }
+
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+    margin-top: 30%;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+
 @keyframes slide {
   from {
     opacity: 0;
@@ -378,6 +449,7 @@ footer ul li i {
     margin-top: 0%;
   }
 }
+
 #main-page1 ul li .text {
   margin-top: 10px;
   width: 95%;
@@ -386,6 +458,7 @@ footer ul li i {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 #main-page1 ul li .li-title {
   white-space: nowrap;
   overflow: hidden;
@@ -393,6 +466,7 @@ footer ul li i {
   font-size: 1rem;
   font-weight: bold;
 }
+
 #main-page1 ul li .desc {
   white-space: nowrap;
   overflow: hidden;
@@ -402,6 +476,7 @@ footer ul li i {
   font-weight: 400;
   font-size: 0.81rem;
 }
+
 #main-page1 ul li .money {
   padding-left: 2px;
   padding-right: 10px;
@@ -410,9 +485,11 @@ footer ul li i {
   font-weight: bold;
   float: right;
 }
+
 #main-page1 ul li .width-text {
   width: 240px;
 }
+
 #main-page1 ul li .animation {
   overflow: hidden;
   cursor: pointer;
@@ -420,10 +497,12 @@ footer ul li i {
   float: right;
   height: 100%;
   width: 0px;
-  background-color: rgb(107, 234, 181);
-  transition-duration: 1000ms;
+  background-color: #6beab5;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   opacity: 0;
 }
+
 #main-page1 ul li .animation i {
   width: 0px;
   height: 0px;
@@ -433,27 +512,37 @@ footer ul li i {
   margin-top: 22px;
   margin-left: 18px;
 }
+
 #main-page1 ul li:hover .animation {
   width: 25%;
-  transition-duration: 1000ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   opacity: 1;
 }
+
 #main-page1 ul li:hover i {
   width: 20px;
   height: 20px;
   display: inline-block;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
   transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
 }
+
 #main-page1 #btn {
   margin: 30px auto 0px auto;
   width: 150px;
 }
+
 #main-page1 button {
   cursor: pointer;
   width: 150px;
   font-size: 0.95rem;
   color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#b367cc));
   background: linear-gradient(#ff79da, #b367cc);
   border: none;
   border-radius: 60px;
@@ -465,17 +554,18 @@ footer ul li i {
   #main-top-menu {
     height: 200px;
   }
-
   h2 {
     width: 100%;
     margin-left: 0px;
     text-align: center;
   }
-
   #main-container {
     padding-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #main-container h3 {
     margin-top: -30px;
@@ -488,13 +578,15 @@ footer ul li i {
   #main-container div {
     margin-top: 20px;
   }
-
   footer {
     height: 150px;
   }
   footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   footer ul .footer-li {
     margin-bottom: 30px;
@@ -505,9 +597,9 @@ footer ul li i {
   footer ul li {
     margin: auto;
   }
-
   /*********************************RESPONSIVE PAGE1****************************************/
   #page-1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#4a4a4a), to(#171510));
     background: linear-gradient(#4a4a4a, #171510);
     height: 120px;
   }
@@ -519,12 +611,10 @@ footer ul li i {
   #page-1 div {
     margin-top: -30px;
   }
-
   #head-page1 {
     height: 0px;
     background: none;
   }
-
   #main-page1 {
     background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
@@ -532,7 +622,7 @@ footer ul li i {
   }
   #main-page1 h1 {
     text-shadow: 1px 1px 6px white;
-    color: rgb(0, 0, 0);
+    color: black;
     text-align: center;
     width: 280px;
     font-size: 1.5rem;
@@ -542,7 +632,7 @@ footer ul li i {
     border-radius: 30px;
     font-weight: bold;
     padding: 10px;
-    background-color: rgba(20, 235, 235, 0.8);
+    background-color: #14ebebcc;
     border-bottom: 0px;
     text-align: center;
     width: 100px;
@@ -551,13 +641,16 @@ footer ul li i {
   }
   #main-page1 ul li {
     background-color: rgba(255, 255, 255, 0.883);
-    box-shadow: 3px 4px 20px 5px rgba(42, 42, 42, 0.2509803922);
-  }
-}
-@media screen and (min-width: 992px) {
-  #work {
-    display: flex;
+    -webkit-box-shadow: 3px 4px 20px 5px #2a2a2a40;
+            box-shadow: 3px 4px 20px 5px #2a2a2a40;
   }
 }
 
+@media screen and (min-width: 992px) {
+  #work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=style.css.map */
