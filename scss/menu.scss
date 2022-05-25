@@ -1,0 +1,257 @@
+/***********************************************PALETTE DU GOUT*********************************/
+
+/*********************************NAV****************************************/
+
+#page-1 {
+    z-index: 2;
+    height: 60px;
+  
+    a {
+      color: #393939;
+      width: 100%;
+      text-decoration: none;
+    }
+  
+    i {
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 20px;
+    }
+  
+    div {
+      margin: -25px auto 0px auto;
+      background-image: url(../img/ohmyfood.png);
+      height: 30px;
+      width: 175px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  
+  /*********************************HEADER****************************************/
+  
+  #head-page1, #head-page2, #head-page3, #head-page4 {
+    height: 230px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #head-page1 {
+    background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  }
+  #head-page2 {
+      background-position: 80%;
+    background-image: url(../img/stil-u2Lp8tXIcjw-unsplash.jpg);
+  }
+  #head-page3 {
+    background-image: url(../img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  }
+  #head-page4 {
+    background-image: url(../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  }
+  
+  
+  /*********************************MAIN****************************************/
+  
+  #main-page1 {
+    padding-bottom: 50px;
+    width: 100%;
+    margin-top: -30px;
+    background-color: #f2f2f2;
+    border-radius: 30px 30px 0px 0px;
+  
+    h1 {
+      color: #101010;
+      width: 260px;
+      font-size: 1.4rem;
+      margin: auto;
+      padding: 20px 0px;
+  
+      i {
+        margin-left: 20px;
+      }
+    }
+  
+    > p {
+      margin-top: 20px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      width: 35px;
+      margin-left: 15px;
+      border-bottom: 2px solid #14ebeb;
+    }
+  
+    ul {
+      list-style: none;
+  
+      li {
+        display: flex;
+        width: 290px;
+        height: 65px;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 15px auto;
+        background-color: white;
+        box-shadow: 3px 4px 20px 5px #d5d5d5;
+        animation-duration: 1s;
+        animation-name: slide;
+        animation-delay: 2100ms;
+        @keyframes slide {
+          from {
+            opacity: 0;
+            margin-top: 30%;
+          }
+  
+          to {
+            opacity: 1;
+            margin-top: 0%;
+          }
+        }
+  
+        .text {
+          margin-top: 10px;
+          width: 95%;
+          padding-left: 7px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+  
+        .li-title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+  
+        .desc {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-top: 10px;
+          max-width: 235px;
+          font-weight: 400;
+          font-size: 0.81rem;
+        }
+  
+        .money {
+          padding-left: 2px;
+          padding-right: 10px;
+          margin-top: 40px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          float: right;
+        }
+  
+        .width-text {
+          width: 240px;
+        }
+  
+        .animation {
+          margin-right: -1px;
+          overflow: hidden;
+          cursor: pointer;
+          border-radius: 0px 15px 15px 0px;
+          float: right;
+          height: 100%;
+          width: 0px;
+          background-color: rgb(107, 234, 181);
+          transition-duration: 1000ms;
+          opacity: 0;
+          i {
+            width: 0px;
+            height: 0px;
+            font-size: 1.3rem;
+            color: white;
+            text-align: center;
+            margin-top: 22px;
+            margin-left: 18px;
+          }
+        }
+  
+        &:hover .animation {
+          width: 25%;
+          transition-duration: 500ms;
+          opacity: 1;
+        }
+        &:hover i {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          transform: rotate(360deg);
+          transition: transform 1000ms;
+        }
+      }
+    }
+  
+    #btn {
+      margin: 30px auto 0px auto;
+      width: 150px;
+    }
+  
+    button {
+      cursor: pointer;
+      width: 150px;
+      font-size: 0.95rem;
+      color: white;
+      background: linear-gradient(#ff79da, #b367cc);
+      border: none;
+      border-radius: 60px;
+      padding: 10px 30px;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+
+    #page-1 {
+      background: linear-gradient(rgb(255, 255, 255), #cfcfcf);
+      height: 100px;
+  
+      i {
+        color: black;
+        margin-top: 35px;
+        font-size: 1.3rem;
+      }
+  
+      div {
+        margin-top: -25px;
+      }
+    }
+
+    #head-page1, #head-page2, #head-page3, #head-page4 {
+        height: 350px;
+        background-position: 90%;
+    }
+  
+    #main-page1 {
+  
+      h1 {
+        text-shadow: 1px 1px 6px white;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        width: 280px;
+        font-size: 1.5rem;
+      }
+  
+      > p {
+        cursor: pointer;
+        border-radius: 30px;
+        font-weight: bold;
+        padding: 10px;
+        background-color: rgb(107, 234, 181);
+        border-bottom: 0px;
+        text-align: center;
+        width: 100px;
+        margin: auto;
+        font-size: 1.3rem;
+      }
+  
+      ul {
+        li {
+          background-color: rgba(255, 255, 255, 0.883);
+          box-shadow: 3px 4px 20px 5px #2a2a2a40;
+        }
+      }
+    }
+  }
