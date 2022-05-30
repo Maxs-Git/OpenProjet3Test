@@ -7,7 +7,7 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(234, 234, 234, 0.9176470588);
+  background-color: rgba(234, 234, 234, 0.9568627451);
   animation-name: load;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
@@ -40,21 +40,21 @@
 }
 /***********************************************PALETTE DU GOUT*********************************/
 /*********************************NAV****************************************/
-#page-1 {
+nav {
   z-index: 2;
   height: 60px;
 }
-#page-1 a {
+nav a {
   color: #393939;
   width: 100%;
   text-decoration: none;
 }
-#page-1 i {
+nav i {
   margin-left: 20px;
   margin-top: 20px;
   width: 20px;
 }
-#page-1 div {
+nav div {
   margin: -25px auto 0px auto;
   background-image: url(../img/ohmyfood.png);
   height: 30px;
@@ -64,7 +64,7 @@
 }
 
 /*********************************HEADER****************************************/
-#head-page1, #head-page2, #head-page3, #head-page4 {
+.header-menu {
   height: 230px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,24 +88,24 @@
 }
 
 /*********************************MAIN****************************************/
-#main-page1 {
+#main-page {
   padding-bottom: 50px;
   width: 100%;
   margin-top: -30px;
   background-color: #f2f2f2;
   border-radius: 30px 30px 0px 0px;
 }
-#main-page1 h1 {
+#main-page h1 {
   color: #101010;
   width: 260px;
   font-size: 1.4rem;
   margin: auto;
   padding: 20px 0px;
 }
-#main-page1 h1 i {
+#main-page h1 i {
   margin-left: 20px;
 }
-#main-page1 > p {
+#main-page .titre_ul {
   margin-top: 20px;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -114,10 +114,10 @@
   margin-left: 15px;
   border-bottom: 2px solid #14ebeb;
 }
-#main-page1 ul {
+#main-page ul {
   list-style: none;
 }
-#main-page1 ul li {
+#main-page ul li {
   display: flex;
   width: 290px;
   height: 65px;
@@ -133,14 +133,14 @@
 @keyframes slide {
   from {
     opacity: 0;
-    margin-top: 30%;
+    margin-top: 50%;
   }
   to {
     opacity: 1;
     margin-top: 0%;
   }
 }
-#main-page1 ul li .text {
+#main-page ul li .text {
   margin-top: 10px;
   width: 95%;
   padding-left: 7px;
@@ -148,14 +148,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#main-page1 ul li .li-title {
+#main-page ul li .li-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
 }
-#main-page1 ul li .desc {
+#main-page ul li .desc {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -164,7 +164,7 @@
   font-weight: 400;
   font-size: 0.81rem;
 }
-#main-page1 ul li .money {
+#main-page ul li .money {
   padding-left: 2px;
   padding-right: 10px;
   margin-top: 40px;
@@ -172,10 +172,10 @@
   font-weight: bold;
   float: right;
 }
-#main-page1 ul li .width-text {
+#main-page ul li .width-text {
   width: 240px;
 }
-#main-page1 ul li .animation {
+#main-page ul li .animation {
   margin-right: -1px;
   overflow: hidden;
   cursor: pointer;
@@ -187,7 +187,7 @@
   transition-duration: 1000ms;
   opacity: 0;
 }
-#main-page1 ul li .animation i {
+#main-page ul li .animation i {
   width: 0px;
   height: 0px;
   font-size: 1.3rem;
@@ -196,25 +196,28 @@
   margin-top: 22px;
   margin-left: 18px;
 }
-#main-page1 ul li:hover .animation {
+#main-page ul li:hover .animation {
   width: 25%;
   transition-duration: 500ms;
   opacity: 1;
 }
-#main-page1 ul li:hover i {
+#main-page ul li:hover i {
   width: 20px;
   height: 20px;
   display: inline-block;
   transform: rotate(360deg);
   transition: transform 1000ms;
 }
-#main-page1 #btn {
-  margin: 30px auto 0px auto;
-  width: 150px;
+#main-page #btn {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
 }
-#main-page1 button {
-  cursor: pointer;
+#main-page button {
+  margin: auto;
   width: 150px;
+  cursor: pointer;
   font-size: 0.95rem;
   color: white;
   background: linear-gradient(#ff79da, #b367cc);
@@ -224,32 +227,33 @@
 }
 
 @media screen and (min-width: 600px) {
-  #page-1 {
+  nav {
     background: linear-gradient(rgb(255, 255, 255), #cfcfcf);
     height: 100px;
   }
-  #page-1 i {
+  nav i {
     color: black;
     margin-top: 35px;
     font-size: 1.3rem;
   }
-  #page-1 div {
+  nav div {
     margin-top: -25px;
   }
 
-  #head-page1, #head-page2, #head-page3, #head-page4 {
+  .header-menu {
     height: 350px;
     background-position: 90%;
   }
 
-  #main-page1 h1 {
+  #main-page h1 {
     text-shadow: 1px 1px 6px white;
     color: rgb(0, 0, 0);
     text-align: center;
-    width: 280px;
+    width: 100%;
+    height: 50px;
     font-size: 1.5rem;
   }
-  #main-page1 > p {
+  #main-page .titre_ul {
     cursor: pointer;
     border-radius: 30px;
     font-weight: bold;
@@ -261,9 +265,28 @@
     margin: auto;
     font-size: 1.3rem;
   }
-  #main-page1 ul li {
+  #main-page ul li {
     background-color: rgba(255, 255, 255, 0.883);
     box-shadow: 3px 4px 20px 5px rgba(42, 42, 42, 0.2509803922);
+  }
+}
+@media screen and (min-width: 900px) {
+  #main-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #main-page h1 {
+    width: 100%;
+  }
+  #main-page div {
+    width: 295px;
+  }
+  #main-page div .titre_ul {
+    margin-bottom: 20px;
+  }
+  #main-page #btn {
+    width: 100%;
   }
 }
 * {
@@ -280,10 +303,6 @@ body {
 }
 
 /***************************HEADER***************************/
-header {
-  color: red;
-  width: 100%;
-}
 header div {
   margin: auto;
   width: 150px;
