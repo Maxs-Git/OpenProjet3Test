@@ -21,37 +21,48 @@ $color-footer: #4a4a4a;
 
 /***************************HEADER***************************/
 
-#head-menu {
+header{
   color: red;
   width: 100%;
 
-  #logo-div {
+  div{
     margin:auto;
     width: 150px;
-
-    #logo {
-      margin-top: 20px;
-      margin-bottom: 30px;
-      height: 30px;
-    width: 150px;
-    }
+      img  {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 150px;
+      }
   }
     
-p {
+form {
   text-align: center;
-  box-shadow: inset -1px 2px 5px 0px #4a4a4a;
+  box-shadow: inset 1px 1px 5px 1px #4a4a4a;
   font-size: 16px;
   font-weight: bold;
   padding-top: 10px;
   width: 100%;
   height: 30px;
   background-color: $color-grey;
-  color: #5c5c5c;
+  color: #393939;
 
   i {
-    color: #393939;
-    margin-right: 20px;
+    margin-right: 10px;
   }
+  input {
+    height: 20px;
+    width: 100px;
+    background-color: $color-grey;
+    border: none;
+
+  }
+    input::placeholder {
+      padding-left: 2px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #393939;
+    }
 }
 }
 /***************************MAIN-TOP***************************/
@@ -155,22 +166,19 @@ h2 {
   }
 
   > div {
+    position: relative;
     box-shadow: -1px 1px 20px 0px #9d9d9d;
     margin: 20px auto;
     border-radius: 10px;
     width: 290px;
     background-color: white;
-  }
-
-  a {
+    
+    a {
     text-decoration: none;
     color: black;
   }
 
-  #img1,
-  #img2,
-  #img3,
-  #img4 {
+    img {
     cursor: pointer;
     border-radius: 10px 10px 0px 0px;
     border: none;
@@ -180,14 +188,16 @@ h2 {
     background-repeat: no-repeat;
     object-fit: cover;
   }
-
+  
   span {
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 15px;
     border-radius: 5px;
     font-size: 0.8rem;
     font-weight: bold;
     padding: 7px 10px;
-    margin-top: 10px;
-    margin-left: -80px;
     position: absolute;
     color: green;
     background-color: rgb(173, 255, 210);
@@ -199,17 +209,12 @@ h2 {
     margin-top: 20px;
     padding-bottom: 20px;
   }
-
+  
   .text-title {
     font-weight: 900;
     font-size: 1rem;
   }
-
-   div p {
-    font-weight: 100;
-    margin-top: 5px;
-  }
-
+  
   .heart {
     height: 20px;
     width: 20px;
@@ -217,7 +222,7 @@ h2 {
     font-size: 1.4rem;
     position: absolute;
     margin-left: 215px;
-
+    
     &:hover .full-heart {
       width: 20px;
       transform: scale(1) !important;
@@ -226,7 +231,7 @@ h2 {
       opacity: 0;
     }
   }
-
+  
   .full-heart {
     width: 20px;
     position: absolute;
@@ -234,13 +239,14 @@ h2 {
     transform: scale(0);
     transition-duration: 1000ms;
   }
-
+  
   .border-heart {
     opacity: 1;
     transition-duration: 1200ms;
     width: 20px;
     color: black;
   }
+}
 }
 /***********************************************FOOTER*********************************/
 footer {
@@ -269,12 +275,10 @@ footer {
     }
   }
 }
-/***********************************************PALETTE DU GOUT*********************************/
-/***********************************************PALETTE DU GOUT*********************************/
 
 /*********************************RESPONSIVE ACCUEIL ****************************************/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 610px) {
 
   #main-top-menu {
     height: 200px;
@@ -287,8 +291,10 @@ footer {
   }
 
   #main-container {
-    padding-top: 50px;    display: flex;
+    padding-top: 50px; 
+     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     h3 {
       margin-top: -30px;
@@ -299,7 +305,7 @@ footer {
       margin-left: 0px;
     }
     div {
-      margin-top: 20px;
+      margin: 10px  10px ;
     }
   }
 

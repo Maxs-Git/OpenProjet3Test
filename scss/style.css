@@ -7,7 +7,7 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: #cacaca;
+  background-color: rgba(234, 234, 234, 0.9176470588);
   animation-name: load;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
@@ -280,34 +280,45 @@ body {
 }
 
 /***************************HEADER***************************/
-#head-menu {
+header {
   color: red;
   width: 100%;
 }
-#head-menu #logo-div {
+header div {
   margin: auto;
   width: 150px;
 }
-#head-menu #logo-div #logo {
+header div img {
   margin-top: 20px;
   margin-bottom: 30px;
   height: 30px;
   width: 150px;
 }
-#head-menu p {
+header form {
   text-align: center;
-  box-shadow: inset -1px 2px 5px 0px #4a4a4a;
+  box-shadow: inset 1px 1px 5px 1px #4a4a4a;
   font-size: 16px;
   font-weight: bold;
   padding-top: 10px;
   width: 100%;
   height: 30px;
   background-color: #f2f2f2;
-  color: #5c5c5c;
-}
-#head-menu p i {
   color: #393939;
-  margin-right: 20px;
+}
+header form i {
+  margin-right: 10px;
+}
+header form input {
+  height: 20px;
+  width: 100px;
+  background-color: #f2f2f2;
+  border: none;
+}
+header form input::placeholder {
+  padding-left: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #393939;
 }
 
 /***************************MAIN-TOP***************************/
@@ -401,20 +412,18 @@ h2 {
   margin-left: 16px;
 }
 #main-container > div {
+  position: relative;
   box-shadow: -1px 1px 20px 0px #9d9d9d;
   margin: 20px auto;
   border-radius: 10px;
   width: 290px;
   background-color: white;
 }
-#main-container a {
+#main-container > div a {
   text-decoration: none;
   color: black;
 }
-#main-container #img1,
-#main-container #img2,
-#main-container #img3,
-#main-container #img4 {
+#main-container > div img {
   cursor: pointer;
   border-radius: 10px 10px 0px 0px;
   border: none;
@@ -424,32 +433,30 @@ h2 {
   background-repeat: no-repeat;
   object-fit: cover;
 }
-#main-container span {
+#main-container > div span {
+  right: 10px;
+  top: 10px;
+  width: 50px;
+  height: 15px;
   border-radius: 5px;
   font-size: 0.8rem;
   font-weight: bold;
   padding: 7px 10px;
-  margin-top: 10px;
-  margin-left: -80px;
   position: absolute;
   color: green;
   background-color: rgb(173, 255, 210);
 }
-#main-container .text {
+#main-container > div .text {
   text-decoration: none;
   margin-left: 10px;
   margin-top: 20px;
   padding-bottom: 20px;
 }
-#main-container .text-title {
+#main-container > div .text-title {
   font-weight: 900;
   font-size: 1rem;
 }
-#main-container div p {
-  font-weight: 100;
-  margin-top: 5px;
-}
-#main-container .heart {
+#main-container > div .heart {
   height: 20px;
   width: 20px;
   margin-top: -20px;
@@ -457,21 +464,21 @@ h2 {
   position: absolute;
   margin-left: 215px;
 }
-#main-container .heart:hover .full-heart {
+#main-container > div .heart:hover .full-heart {
   width: 20px;
   transform: scale(1) !important;
 }
-#main-container .heart:hover .border-heart {
+#main-container > div .heart:hover .border-heart {
   opacity: 0;
 }
-#main-container .full-heart {
+#main-container > div .full-heart {
   width: 20px;
   position: absolute;
   color: #b367cc;
   transform: scale(0);
   transition-duration: 1000ms;
 }
-#main-container .border-heart {
+#main-container > div .border-heart {
   opacity: 1;
   transition-duration: 1200ms;
   width: 20px;
@@ -502,10 +509,8 @@ footer ul li i {
   margin-right: 10px;
 }
 
-/***********************************************PALETTE DU GOUT*********************************/
-/***********************************************PALETTE DU GOUT*********************************/
 /*********************************RESPONSIVE ACCUEIL ****************************************/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 610px) {
   #main-top-menu {
     height: 200px;
   }
@@ -520,6 +525,7 @@ footer ul li i {
     padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   #main-container h3 {
     margin-top: -30px;
@@ -530,7 +536,7 @@ footer ul li i {
     margin-left: 0px;
   }
   #main-container div {
-    margin-top: 20px;
+    margin: 10px 10px;
   }
 
   footer {
